@@ -57,10 +57,6 @@ public enum Prompt: Equatable, Codable, Sendable {
 
     // MARK: - Run action
 
-    case runActionEligibleForBlockingPlayBonusPlay(
-        player: PromptBoardPlayer
-    )
-
     case runActionEligibleForDodgeBonusPlay(
         player: PromptBoardPlayer
     )
@@ -325,7 +321,9 @@ public enum Prompt: Equatable, Codable, Sendable {
 
     // MARK: - Pre-turn
 
-    case eligibleForDefensivePlayBonusPlay
+
+    case eligibleForRushingPlayBonusPlay
+    case eligibleForAssistedPlayBonusPlay
     case eligibleForPassingPlayBonusPlay
 
     case selectObjectiveToDiscard(

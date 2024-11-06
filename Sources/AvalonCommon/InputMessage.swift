@@ -34,8 +34,6 @@ public enum InputMessage: Codable, Sendable {
 
     // MARK: - Run action
 
-    case runActionUseBlockingPlayBonusPlay
-    case runActionDeclineBlockingPlayBonusPlay
     case runActionUseDodgeBonusPlay
     case runActionDeclineDodgeBonusPlay
     case runActionUseSprintBonusPlay
@@ -179,8 +177,10 @@ public enum InputMessage: Codable, Sendable {
 
     // MARK: - Pre-turn
 
-    case useDefensivePlayBonusPlay
-    case declineDefensivePlayBonusPlay
+    case useRushingPlayBonusPlay
+    case declineRushingPlayBonusPlay
+    case useAssistedPlayBonusPlay
+    case declineAssistedPlayBonusPlay
     case usePassingPlayBonusPlay
     case declinePassingPlayBonusPlay
     case selectObjectiveToDiscard(objectiveIndex: Int)

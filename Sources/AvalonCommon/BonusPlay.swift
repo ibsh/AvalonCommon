@@ -33,27 +33,19 @@ public enum BonusPlay: String, Codable, Sendable {
     /// - Note: Identical in 3E and 4E.
     case blitz
 
-    /// Play this card on your turn at any time after the Pre-Turn Sequence. Players from your
+    /// Play this card at the start of your turn, before the Pre-Turn Sequence. Players from your
     /// team can move adjacent to opponents when making Run actions during this turn, but doing so
     /// ends their Run action.
-    /// - Note: Specific to 3E.
-    case blockingPlay_3E
-
-    /// Play this card on your turn before the Pre-Turn Sequence. Block actions made by your players
-    /// during this turn count as being assisted.
-    /// - Note: Specific to 4E.
-    case blockingPlay_4E
+    /// - Note: Identical in 3E and 4E. Named "Blocking Play" in 3E and "Defensive Play" in 4E, so I
+    /// gave it an agnostic name. In 3E I implement this as being playable only at the start of the
+    /// turn rather than prompting at every action, which gets tedious.
+    case rushingPlay
 
     /// Play this card at the start of your turn, before the Pre-Turn Sequence. Block actions made
     /// by your players this turn count as being assisted.
-    /// - Note: Specific to 3E.
-    case defensivePlay_3E
-
-    /// Play this card after the Pre-Turn Sequence, before your first Player Action. Players from
-    /// your team can move adjacent to opponents when making Run actions during this turn, but doing
-    /// so ends their Run action.
-    /// - Note: Specific to 4E.
-    case defensivePlay_4E
+    /// - Note: Identical in 3E and 4E. Named "Defensive Play" in 3E and "Blocking Play" in 4E, so I
+    /// gave it an agnostic name.
+    case assistedPlay
 
     /// Play this card after an opponent makes a Mark action but before the Claim Challenge Card
     /// step. One of your players adjacent to that opponent can immediately make a free Sidestep
