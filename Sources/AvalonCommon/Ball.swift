@@ -21,7 +21,7 @@ public struct Ball: Codable, Sendable {
 }
 
 extension Ball {
-    public enum State: Codable {
+    public enum State: Codable, Sendable {
         case held(playerID: PlayerID)
         case loose(square: Square)
     }

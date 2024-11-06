@@ -104,7 +104,7 @@ public enum Event: Equatable, Codable, Sendable {
 
     case rolledForFoul(
         coachID: CoachID,
-        result: FoulDieResult
+        results: FoulResults
     )
 
     case rolledForBlock(

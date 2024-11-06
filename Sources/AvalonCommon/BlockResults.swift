@@ -9,13 +9,13 @@ import Foundation
 
 public struct BlockResults: Hashable, Codable, Sendable {
     public var dice: [BlockDieResult]
-    public var claws: Int?
+    public var extra: Int?
 
     public init(
         dice: [BlockDieResult],
-        claws: Int? = nil
+        extra: Int? = nil
     ) {
         self.dice = dice
-        self.claws = claws
+        self.extra = extra
     }
 }

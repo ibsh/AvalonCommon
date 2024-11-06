@@ -8,14 +8,14 @@
 import Foundation
 
 public struct ChallengeDeckConfig: Equatable, Codable, Sendable {
-    public let useEndgameCards: Bool
+    public let useExtraCards: Bool
     public let randomizeBonusPlays: Bool
 
     public init(
-        useEndgameCards: Bool,
+        useExtraCards: Bool,
         randomizeBonusPlays: Bool
     ) {
-        self.useEndgameCards = useEndgameCards
+        self.useExtraCards = useExtraCards
         self.randomizeBonusPlays = randomizeBonusPlays
     }
 }

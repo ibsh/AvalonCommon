@@ -27,7 +27,7 @@ public struct Player: Codable, Sendable {
 }
 
 extension Player {
-    public enum State: Codable {
+    public enum State: Codable, Sendable {
         case inReserves
         case standing(square: Square)
         case prone(square: Square)
