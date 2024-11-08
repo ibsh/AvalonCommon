@@ -8,6 +8,10 @@
 import Foundation
 
 public enum PlayerSpecID: String, Hashable, Codable, Sendable {
+    case amazon_linewoman
+    case amazon_thrower
+    case amazon_blitzer
+    case amazon_blocker
     case blackOrc_blackOrc
     case blackOrc_goblin
     case chaos_beastman
@@ -26,6 +30,12 @@ public enum PlayerSpecID: String, Hashable, Codable, Sendable {
     case elf_blitzer
     case goblin_goblin
     case goblin_troll
+    case gnome_lineman
+    case gnome_illusionist
+    case gnome_beastmaster
+    case gnome_woodland_fox
+    case gnome_treeman
+    /// - Note: named "Lineman" in 4E.
     case halfling_hopeful
     case halfling_catcher
     case halfling_hefty
@@ -47,8 +57,14 @@ public enum PlayerSpecID: String, Hashable, Codable, Sendable {
     case necromantic_fleshGolem
     case noble_lineman
     case noble_passer
+    /// - Note: named "Bodyguard" in 4E.
     case noble_guard
     case noble_blitzer
+    case norse_lineman
+    case norse_beer_boar
+    case norse_berserker
+    case norse_valkyrie
+    case norse_ulfwerener
     case nurgle_lineman
     case nurgle_pestigor
     case nurgle_bloater
@@ -72,6 +88,10 @@ public enum PlayerSpecID: String, Hashable, Codable, Sendable {
     case undead_ghoul
     case undead_wight
     case undead_mummy
+    case vampire_thrall
+    case vampire_runner
+    case vampire_passer
+    case vampire_blitzer
     case woodElf_lineman
     case woodElf_passer
     case woodElf_catcher
