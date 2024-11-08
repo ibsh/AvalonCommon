@@ -17,11 +17,6 @@ public enum BonusPlay: String, Codable, Sendable {
     /// - Note: Identical in 3E and 4E.
     case accuratePass
 
-    /// Play this card before your player makes a Mark action. They can move up to 4 squares instead
-    /// of two, but must still end the action Marked.
-    /// - Note: Unique to 4E, but identical to 3E's "Interference".
-    case aggressiveMark
-
     /// Play this card after your player knocks an opponent down. The opponent's Armour value is 6+
     /// for this Armour check.
     /// - Note: Specific to 4E.
@@ -72,8 +67,9 @@ public enum BonusPlay: String, Codable, Sendable {
 
     /// Play this card before your player makes a Mark action. They can move up to 4 squares instead
     /// of two, but must still end the action Marked.
-    /// - Note: Unique to 3E, but identical to 4E's "Aggressive Mark".
-    case interference
+    /// - Note: Identical in 3E and 4E. Named "Interference" in 3E and "Aggressive Mark" in 4E, so I
+    /// gave it an agnostic name.
+    case longMark
 
     /// 3E text:
     /// Play this card after an opponent makes a Run action but before the Claim Challenge Card
@@ -235,6 +231,7 @@ public enum BonusPlay: String, Codable, Sendable {
 
     /// Play this card immediately - do not add it to your hand. Make up to two free Reserves
     /// actions. One player that has made a Reserves action this turn can make a free Run action.
+    /// - Note: Unique to 3E.
     case yourTimeToShine
 
     // 4E Random events
