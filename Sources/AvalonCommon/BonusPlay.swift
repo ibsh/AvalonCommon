@@ -86,14 +86,14 @@ public enum BonusPlay: String, Codable, Sendable {
     /// - Note: Identical in 3E and 4E.
     case intervention
 
-    /// 3E text:
     /// Play this card at the start of your turn, after the Pre-Turn Sequence but before making your
     /// first Player Action. Pick a Prone player on your team and make a free Stand Up action.
-    /// 4E text:
-    /// Pick a Prone player on your team and make a free Stand Up action.
-    /// - Note: This is not identical in 3E and 4E but I'm going to treat it as such because
-    /// prompting the user before every player action would get onerous.
-    case jumpUp
+    /// - Note: Specific to 3E.
+    case jumpUp_3E
+
+    /// Play this card when declaring a Stand Up action to get the action for free.
+    /// - Note: Specific to 4E.
+    case jumpUp_4E
 
     /// Play this card immediately - do not add it to your hand. Two new balls come into play,
     /// following the rules for "New Ball" and "Multiple Balls In Play".
@@ -111,14 +111,14 @@ public enum BonusPlay: String, Codable, Sendable {
     /// - Note: Identical in 3E and 4E.
     case rawTalent
 
-    /// 3E text:
     /// Play this card at the start of your turn, after the Pre-Turn Sequence but before making your
     /// first Player Action. Make a free Reserves action.
-    /// 4E text:
-    /// Play this card before making a Player Action. Make a free Reserves action.
-    /// - Note: This is not identical in 3E and 4E but I'm going to treat it as such because
-    /// prompting the user before every player action would get onerous.
-    case reserves
+    /// - Note: Specific to 3E.
+    case reserves_3E
+
+    /// Play this card when declaring a Reserves action to get the action for free.
+    /// - Note: Specific to 4E.
+    case reserves_4E
 
     /// Play this card after an opponent makes a Sidestep action. One of your players that was
     /// marking that opponent before the action may move into the square the opponent moved out of.
