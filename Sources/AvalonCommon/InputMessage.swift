@@ -42,8 +42,8 @@ public enum InputMessage: Codable, Sendable {
 
     // MARK: - Mark action
 
-    case markActionUseInterferenceBonusPlay
-    case markActionDeclineInterferenceBonusPlay
+    case markActionUseLongMarkBonusPlay
+    case markActionDeclineLongMarkBonusPlay
     case markActionSelectSquares(squares: [Square])
 
     // MARK: - Pass action

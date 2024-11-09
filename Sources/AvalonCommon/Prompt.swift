@@ -73,7 +73,7 @@ public enum Prompt: Equatable, Codable, Sendable {
 
     // MARK: - Mark action
 
-    case markActionEligibleForInterferenceBonusPlay(
+    case markActionEligibleForLongMarkBonusPlay(
         player: PromptBoardPlayer
     )
 
@@ -269,7 +269,7 @@ public enum Prompt: Equatable, Codable, Sendable {
 
     case eligibleForInterventionBonusPlayMarkAction(
         /// Note that this is a set of declarations rather than player IDs because you might need to
-        /// spend an Interference bonus play to make some of these declarations valid.
+        /// spend a Long Mark bonus play to make some of these declarations valid.
         validDeclarations: Set<PromptValidDeclaringPlayer>
     )
 
